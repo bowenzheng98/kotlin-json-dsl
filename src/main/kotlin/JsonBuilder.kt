@@ -8,6 +8,9 @@ fun json(build: JsonBuilder.() -> Unit): String {
     return JsonBuilder().json(build).toString()
 }
 
+/**
+ * Main class that handles the json dsl. Include infix functions to add properties to the json.
+ */
 class JsonBuilder {
     private val deque: Deque<JSONObject> = ArrayDeque()
 
